@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-primary" (click)="updateTextOnClick()">Display Details</button>
+        <p *ngIf="showText">Details: Hey, I'm here</p>
+        <div *ngFor="let clickNum of buttonClicks; let i for index;"
+            [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'red'}" [ngClass]="{whiteText: i > 4}">{{clickNum}}
+        </div>
+    </div>
+</div>
